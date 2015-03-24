@@ -31,8 +31,7 @@ public class CustomWebSocketServlet extends WebSocketServlet {
     }
 
 
-    public static void broadcastMessage(String text) {
-        String json = "{\"value\": \"" + text + "\"}";
+    public static void broadcastMessage(String json) {
         connections.stream()
             .forEach(w -> w.sendMessage(json)
             );

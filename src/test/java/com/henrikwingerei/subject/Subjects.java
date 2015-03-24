@@ -15,7 +15,6 @@ public class Subjects {
     @Test
     public void asyncSubject() {
         //Opprett et AsyncSubject som subcriber og skriver ut alle verdiene
-        //Opprett videre en Observable fra listen og ...
         //Async Subject returnerer kun det siste eventet som Observable emitter (etter onCompleted)
         AsyncSubject<Integer> subject = AsyncSubject.create();
 
