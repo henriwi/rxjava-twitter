@@ -9,7 +9,7 @@ import rx.subjects.PublishSubject;
 
 import static com.henrikwingerei.Util.createList;
 
-public class SubjectsOppgaver {
+public class Subjects {
 
 
     @Test
@@ -61,6 +61,4 @@ public class SubjectsOppgaver {
 
         Thread.sleep(10000);
     }
-
-
 }
