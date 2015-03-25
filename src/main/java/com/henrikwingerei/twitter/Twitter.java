@@ -13,12 +13,6 @@ public class Twitter {
     public void fetchTweets() throws IOException {
         // Bruk metoden twitterObservabe() til å subscribe på twitter-streamen
         // Metoden CustomWebSocketServlet.broadcastMessage(v) kan brukes til å sende data til klienten
-
-        twitterObservable()
-            .subscribe((v) -> {
-                System.out.println(v);
-                CustomWebSocketServlet.broadcastMessage(v.getText());
-            });
     }
 
     public Observable<Status> twitterObservable() {
