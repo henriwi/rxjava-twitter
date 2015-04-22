@@ -6,12 +6,16 @@ import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 
-public class JettyServer {
+import static java.lang.Integer.parseInt;
+import static java.lang.System.getProperty;
+import static java.lang.System.getenv;
+
+public class App {
 
     public static void main(String[] args) throws Exception {
-        Server server = new Server(8080);
+        Server server = new Server(getPort());
         ServletContextHandler handler = new ServletContextHandler(ServletContextHandler.SESSIONS);
-        handler.setContextPath("/"); // technically not required, as "/" is the default
+        handler.setContextPath("/");
         handler.addServlet(CustomWebSocketServlet.class, "/ws");
 
         ResourceHandler resourceHandler = new ResourceHandler();
@@ -25,5 +29,15 @@ public class JettyServer {
         server.start();
 
         new Twitter().fetchTweets();
+    }
+
+    private static int getPort() {
+        String port = getenv("PORT");
+
+        if (port == null) {
+            return 8080;
+        } else {
+            return parseInt(port);
+        }
     }
 }
