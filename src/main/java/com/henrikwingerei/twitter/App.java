@@ -29,6 +29,8 @@ public class App {
         server.start();
 
         new Twitter().fetchTweets();
+        
+        server.join();
     }
 
     private static int getPort() {
