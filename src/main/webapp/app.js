@@ -16,8 +16,6 @@ $(function () {
 });
 
 var render = function(data, map) {
-    console.log(data);
-
     var myLatlng = new google.maps.LatLng(data.geoLocation.latitude, data.geoLocation.longitude);
 
     // To add the marker to the map, use the 'map' property
