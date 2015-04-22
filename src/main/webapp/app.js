@@ -5,7 +5,9 @@ $(function () {
     };
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-    ws = new WebSocket('ws://localhost:8080/ws');
+    var protocol = location.protocol === "https:" ? "wss:" : "ws:";
+
+    ws = new WebSocket(protocol + "//" + location.host + "/ws");
 
     ws.onmessage = function (msg) {
         var data = JSON.parse(msg.data);
