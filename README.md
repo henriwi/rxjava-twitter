@@ -1,19 +1,11 @@
-# rxjava-workshop
-RxJava workshop
+# rxjava-twitter
+A simple demo showing rxjava consuming from Twitter Stream API and displaying random tweets on a map.
 
-## Oppsett
-
-Gå til https://apps.twitter.com
-
-Trykk "Create new app". Random navn + beskrivelse og "http://example.org" som url.
-
-Gå til "Keys and Access Tokens".
-
-```twitter4j.properties``` i ```src/main/resources``` skal inneholde følgende:
+Requires the following environment-variables to be set:
 
 ```
-oauth.consumerKey=<your-key>
-oauth.consumerSecret=<your-secret>
-oauth.accessToken=<your-token>
-oauth.accessTokenSecret<your-secret>
+twitter4j.oauth.consumerKey=<your-key>
+twitter4j.oauth.consumerSecret=<your-secret>
+twitter4j.oauth.accessToken=<your-token>
+twitter4j.oauth.accessTokenSecret=<your-secret>
 ```
