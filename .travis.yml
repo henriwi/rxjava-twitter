@@ -1,8 +1,8 @@
 language: java
 script: mvn install
 jdk:
-- oraclejdk8
+  - oraclejdk8
 
 deploy:
   provider: heroku
-  api_key: "12a9f43c2d4e5d47910b3de0d1aa00096ef014b5"
+  api_key: 12a9f43c2d4e5d47910b3de0d1aa00096ef014b5
