@@ -9,5 +9,3 @@ twitter4j.oauth.consumerSecret=<your-secret>
 twitter4j.oauth.accessToken=<your-token>
 twitter4j.oauth.accessTokenSecret=<your-secret>
 ```
-
-Test
